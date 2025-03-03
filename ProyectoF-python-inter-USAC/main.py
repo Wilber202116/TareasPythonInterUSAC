@@ -50,7 +50,7 @@ def control_inicio():
 def ventana_inicio(user_actual):
 
     ventana_inicio = tk.Tk()
-    ventana_inicio.title("Perfil")
+    ventana_inicio.title("Perfil de usuario")
     ventana_inicio.geometry("310x180")
 
     def cerrar_sesion():
@@ -59,7 +59,9 @@ def ventana_inicio(user_actual):
     root.destroy()
 
     if user_actual:
-        Label(ventana_inicio, text=f"Bienvenido {user_actual.nombre}").pack()
+        Label(ventana_inicio, text="Perfil").pack()
+Label(ventana_inicio, text="Nombre:").pack()
+Label(ventana_inicio, text="Apellido:").pack()
         Button(ventana_inicio, text="Cerrar sesion", command=cerrar_sesion)
 
 root = tk.Tk()
